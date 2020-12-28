@@ -1,5 +1,5 @@
-![AURORA](https://telegra.ph/file/8a0b9c6e4629c2ff36747.jpg)
-# AURORA
+![Aurora_queeN](https://telegra.ph/file/8a0b9c6e4629c2ff36747.jpg)
+# Aurora_queeN
 
 A modular Telegram Python bot running on python3 with a sqlalchemy database. This is the Most Powerful Telegram Bot. You Can Clone The Bot At Your Own Risks.
 
