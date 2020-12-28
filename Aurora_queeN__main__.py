@@ -17,18 +17,18 @@ from tg_bot import dispatcher, updater, TOKEN, WEBHOOK, OWNER_ID, CERT_PATH, POR
     ALLOW_EXCL
 # needed to dynamically load modules
 # NOTE: Module order is not guaranteed, specify that in the config file!
-from tg_bot.modules import ALL_MODULES
-from tg_bot import dispatcher
-from tg_bot.modules.disable import DisableAbleCommandHandler
-from tg_bot.modules.helper_funcs.chat_status import is_user_admin
-from tg_bot.modules.helper_funcs.misc import paginate_modules
-from tg_bot.modules.translations.strings import tld
+from Aurora_queeN.modules import ALL_MODULES
+from  Aurora_queeN import dispatcher
+from Aurora_queeN.modules.disable import DisableAbleCommandHandler
+from Aurora_queeN.modules.helper_funcs.chat_status import is_user_admin
+from Aurora_queeN.modules.helper_funcs.misc import paginate_modules
+from Aurora_queeN.modules.translations.strings import tld
 
 
 PM_START_TEXT = """
 
 
-Hey there *{}*, My name is `AURORA` I'm here to help you manage your groups!
+Hey there *{}*, My name is `Aurora_queeN` I'm here to help you manage your groups!
 
 I'm here to make your group management fun and easy!
 I have lots of handy features, such as flood control, a warning system, a note keeping system, and even replies on predetermined filters.
