@@ -1,50 +1,83 @@
-![Aurora_queeN](https://telegra.ph/file/8a0b9c6e4629c2ff36747.jpg)
-# Aurora_queeN
+### @AuRoRa_QuEeN_bot // http://www.telegram.dog/CoNqUeRoR_mEsKeTteR
+> Tσυƈԋ ƚԋҽ ԃҽρƚԋʂ σϝƚɾυƚԋ Fҽҽʅ ƚԋҽ ԋҽɱ σϝԋҽαʋҽN.
 
-A modular Telegram Python bot running on python3 with a sqlalchemy database. This is the Most Powerful Telegram Bot. You Can Clone The Bot At Your Own Risks.
+[![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.png?v=103)](https://github.com/ellerbrock/open-source-badges/)  
+[![GPLv3 license](https://img.shields.io/badge/License-GPLv3-blue.svg)](http://perso.crans.org/besson/LICENSE.html)
 
- Tσυƈԋ ƚԋҽ ԃҽρƚԋʂ σϝƚɾυƚԋ Fҽҽʅ ƚԋҽ ԋҽɱ σϝԋҽαʋҽN. 
+Modular Telegram bot for managing your groups with a extras features.
 
-# Fork It With Your Own Risks
+<p align="center">
+  <a href="https://github.com/CoNqUeRoRmEsKeTtEr/Aurora_queeN/fork">
+    <img src="https://img.shields.io/github/forks/Aurora_queeN?label=Fork&style=social">
+    
+  </a>
+  <a href="https://github.com/CoNqUeRoRmEsKeTtEr/Aurora_queeN">
+    <img src="https://img.shields.io/github/stars/CoNqUeRoRmEsKeTtEr/Aurora_queeN?style=social">
+  </a>
+</p>
 
-
-
-
-
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/CoNqUeRoRmEsKeTtEr/Aurora)
+### Click Below Image to Deploy
+[![Deploy](https://telegra.ph/file/8a0b9c6e4629c2ff36747.jpg)](https://heroku.com/deploy?template=https://github.com/CoNqUeRoRmEsKeTtEr/Aurora_queeN.git)
 
 ### Configuration
 
- 
+There are two possible ways of configuring your bot: a config.py file, or ENV variables.
+
+The prefered version is to use a `config.py` file, as it makes it easier to see all your settings grouped together.
+This file should be placed in your `cinderella` folder, alongside the `__main__.py` file . 
+This is where your bot token will be loaded from, as well as your database URI (if you're using a database), and most of 
+your other settings.
+
+It is recommended to import sample_config and extend the Config class, as this will ensure your config contains all 
+defaults set in the sample_config, hence making it easier to upgrade.
+
+An example `config.py` file could be:
+```
+from aurora.sample_config import Config
+
+
+class Development(Config):
+    OWNER_ID = 1491765026  # my telegram ID
+    OWNER_USERNAME = "CoNqUeRoR_mEsKeTteR"  # my telegram username
+    API_KEY = "your bot api key"  # my api key, as provided by the botfather
+    SQLALCHEMY_DATABASE_URI = 'postgresql://username:password@localhost:5432/database'  # sample db credentials
+    MESSAGE_DUMP = '-1234567890' # some group chat that your bot is a member of
+    USE_MESSAGE_DUMP = True
+    SUDO_USERS = []  # List of id's for users which have sudo access to the bot.
+    LOAD = []
+    NO_LOAD = ['translation']
+```
+
+If you can't have a config.py file (EG on heroku), it is also possible to use environment variables.
 The following env variables are supported:
+ - `ENV`: Setting this to ANYTHING will enable env variables
 
- - `bot_token`: Your bot token, as a string.
- - `owner_id`: An integer of consisting of your owner ID
- - `owner_username`: Your username
- - `api_key`: get it from my.telegram.org 
- - `api_hash`: get it from my.telegram.org
- - `database_url`: Your database URL
- - `message_dump`: optional: a chat where your replied saved messages are stored, to stop people deleting their old 
- - `load`: Space separated list of modules you would like to load
- - `no_load`: Space separated list of modules you would like NOT to load
- - `webhook`: Setting this to ANYTHING will enable webhooks when in env mode
+ - `TOKEN`: Your bot token, as a string.
+ - `OWNER_ID`: An integer of consisting of your owner ID
+ - `OWNER_USERNAME`: Your username
+
+ - `DATABASE_URL`: Your database URL
+ - `MESSAGE_DUMP`: optional: a chat where your replied saved messages are stored, to stop people deleting their old 
+ - `LOAD`: Space separated list of modules you would like to load
+ - `NO_LOAD`: Space separated list of modules you would like NOT to load
+ - `WEBHOOK`: Setting this to ANYTHING will enable webhooks when in env mode
  messages
- - `url`: The URL your webhook should connect to (only needed for webhook mode)
+ - `URL`: The URL your webhook should connect to (only needed for webhook mode)
 
- - `sudo_users`: A space separated list of user_ids which should be considered sudo users
- - `whitelist_users`: A space separated list of user_ids which should be considered support users (can gban/ungban,
+ - `SUDO_USERS`: A space separated list of user_ids which should be considered sudo users
+ - `SUPPORT_USERS`: A space separated list of user_ids which should be considered support users (can gban/ungban,
  nothing else)
- - `support_users`: A space separated list of user_ids, they can be banned.
- - `cert_path`: Path to your webhook certifdev_usersicate
- - `port`: Port to use for your webhooks
- - `del_cmds`: Whether to delete commands from users which don't have rights to use that command
- - `strict_gban`: Enforce gbans across new groups as well as old groups. When a gbanned user talks, he will be banned.
- - `strict_gmute`: Enforce gbans across new groups as well as old groups. When a gbanned user talks, he will be banned.
- - `workers`: Number of threads to use. 8 is the recommended (and default) amount, but your experience may vary.
+ - `WHITELIST_USERS`: A space separated list of user_ids which should be considered whitelisted - they can't be banned.
+ - `DONATION_LINK`: Optional: link where you would like to receive donations.
+ - `CERT_PATH`: Path to your webhook certificate
+ - `PORT`: Port to use for your webhooks
+ - `DEL_CMDS`: Whether to delete commands from users which don't have rights to use that command
+ - `STRICT_GBAN`: Enforce gbans across new groups as well as old groups. When a gbanned user talks, he will be banned.
+ - `WORKERS`: Number of threads to use. 8 is the recommended (and default) amount, but your experience may vary.
  __Note__ that going crazy with more threads wont necessarily speed up your bot, given the large amount of sql data 
  accesses, and the way python asynchronous calls work.
- - `ban_sticker`: Which sticker to use when banning people.
- - `allow_excl`: Whether to allow using exclamation marks ! for commands as well as /.
+ - `BAN_STICKER`: Which sticker to use when banning people.
+ - `ALLOW_EXCL`: Whether to allow using exclamation marks ! for commands as well as /.
 
 ### Python dependencies
 
@@ -94,3 +127,4 @@ You should now be able to build your database URI. This will be:
 
 Replace sqldbtype with whichever db youre using (eg postgres, mysql, sqllite, etc)
 repeat for your username, password, hostname (localhost?), port (5432?), and db name.
+
