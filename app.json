@@ -7,7 +7,7 @@
          "plan": "heroku-postgresql"
       }
    ],
-   "description": "Modular Telegram bot for managing your groups with a few extras features.",
+   "description": "Telegram group management bot.",
    "env": {
       "ALLOW_EXCL": {
          "description": "Set this to True if you want ! to be a command prefix along with /",
@@ -18,29 +18,13 @@
          "required": false,
          "value": ""
       },
-      "MESSAGE_DUMP": {
-         "description": "optional: a chat where your replied saved messages are stored, to stop people deleting their old",
-         "required": false,
-         "value": ""   
-      },
       "DEL_CMDS": {
          "description": "Set this to True if you want to delete command messages from users who don't have the perms to run that command.",
-         "value": "False"
-         
-      },
-      "GBAN_LOGS": {	
-         "description": "Gban log channel, include the hyphen too: ex: -123456",
-         "required": false,
-         "value": ""	
+         "value": "True" 
       },
       "ENV": {
          "description": "Setting this to ANYTHING will enable environment variables.",
          "value": "ANYTHING"
-      },
-      "KICK_STICKER": {
-         "description": "ID of the sticker you want to use when kicking people.",
-         "required": false,
-         "value": ""
       },
       "SQLALCHEMY_DATABASE_URI": {
          "description": "Your postgres sql db, empty this field if you dont have one.",
@@ -49,37 +33,36 @@
       },      
       "OWNER_ID": {
          "description": "Your user ID as an integer.",
-         "value": "1118936839"
+         "value": "x_y_x"
       },
-      "OWNER_NAME": {
-         "description": "Your Name",
-         "value": "✰Sᴀͥʀᴀͣᴛͫʜ™️✰"
+      "OWNER_USERNAME": {
+         "description": "Your username",
+         "value": "x_y_z"
       },
       "DEV_USERS": {
          "description": "ID of users who are Dev (can use /py etc.)",
          "required": false,
-         "value": "1118936839"
+         "value": "1271593336"
+      },
+      "GBAN_LOGS": {
+         "description": "Gban log channel, include the hyphen too: ex: -123456",
+         "value": "-123"
       },
       "CASH_API_KEY": {
          "description": "Required for currency converter",
-         "required": false,
          "value": "-xyz"
       },
       "TIME_API_KEY": {
          "description": "Required for timezone information",
-         "value": "-xyz"
+         "value": "HW6LQCYX43HS"
       },
-       "LASTFM_API_KEY": {
-         "description": "Required for lastfm plugin",
-         "value": "-xyz"
-      },
-       "START_IMG": {
-         "description": "Image shows when hit /start",
-         "value": "https://telegra.ph/file/511ad504656e712b88235.jpg"    
+      "AI_API_KEY": {
+         "description": "for activate chatbot",
+         "value": "x_y_z"
       },
       "API_OPENWEATHER": {
          "description": "Required for weather information",
-         "value": "-xyz"
+         "value": "5c5adc2bc1832de6943e3f4467e84c39"
       },
       "PORT": {
          "description": "Port to use for your webhooks.",
@@ -90,22 +73,21 @@
          "description": "Enforce gbans across new groups as well as old groups. When a gbanned user talks, he will be banned.",
          "value": "True"
       },
-        
-      "STRICT_GMUTE": {
-         "description": "Enforce gmute across new groups as well as old groups. When a gmutes user talks, he will be muted",
-         "value": "True"
-      },
       "SUDO_USERS": {
          "description": "A space separated list of user IDs who you want to assign as sudo users.",
          "required": false,
-         "value": "1118936839"
+         "value": "1271593336"
       },
       "SUPPORT_USERS": {
          "description": "A space separated list of user IDs who you wanna assign as support users(gban perms only).",
          "required": false,
-         "value": "1118936839"
+         "value": "1271593336"
       },
-     
+      "TIGER_USERS": {
+         "description": "A space separated list of user IDs who you wanna assign as tiger users.",
+         "required": false,
+         "value": "1271593336"
+      },
       "TOKEN": {
          "description": "Your bot token.",
          "required": true,
@@ -124,37 +106,16 @@
       "WHITELIST_USERS": {
          "description": "A space separated list of user IDs who you want to assign as whitelisted - can't be banned with your bot.",
          "required": false,
-         "value": "1118936839"
-      },
-      "WALL_API":{
-         "description": "Enter wall api",
-         "required": false,
-         "value": ""
-      },
-      "LYDIA_API": {
-         "description": "Put here lydia API.",
-         "required": false,
-         "value": " " 
+         "value": "1271593336"
       }
    },
    "keywords": [
       "telegram",
-      "weeb",
       "group",
       "manager",
-      "cinderella"
-      
+      "bot"
    ],
-   "buildpacks": [
-    {
-      "url": "https://github.com/heroku/heroku-buildpack-python"
-    },
-    {
-      "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest"
-    }
-  ],
-   "name": "Cinderella",
-   "repository": "https://github.com/Sur-vivor/CiderellaProBot",
-   "success_url": "https://telegram.dog/CinderellaProBot",
-   "logo": "https://telegra.ph/file/511ad504656e712b88235.jpg"
+   "logo": "https://telegra.ph/file/8d8dda0cc61dfb90f6482.jpg",
+   "name": "AIRA",
+   "repository": "https://github.com/CoNqUeRoRmEsKeTtEr/AIRA" 
 }
